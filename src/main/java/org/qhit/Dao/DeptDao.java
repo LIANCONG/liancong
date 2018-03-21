@@ -9,13 +9,17 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.qhit.Pojo.Dept;
 import org.springframework.stereotype.Repository;
-@Repository
+@Repository       
 public class DeptDao {
 
 	@Resource
 	private SessionFactory sf;
 	
 	public List<Dept> selectAll() {
+		
+		
+		
+		
 		Session session = sf.getCurrentSession();
 		String sql="select * from dept";
 		SQLQuery Query = session.createSQLQuery(sql);

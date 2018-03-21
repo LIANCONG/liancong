@@ -32,8 +32,6 @@ public class EmpDao {
 		session.delete(emp);	
 	}
 
-
-
 	public Emp find(Emp emp) {
 		Session session = sf.getCurrentSession();
 		emp=session.get(Emp.class,emp.getEid());
